@@ -1,3 +1,0 @@
-Report.docx
-demo-source.png
-demo-output.png
