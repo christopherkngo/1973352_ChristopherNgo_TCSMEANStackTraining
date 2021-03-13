@@ -1,0 +1,23 @@
+/* This is a test styles.css template with fields filled in to use in the test HTML*/
+
+.divTextClass {
+    color: darkblue;
+    font: 100;
+    font-family:'Courier New', Courier, monospace;
+    font-size: medium;
+    font-style: italic;
+}
+
+.buttonClass {
+    color: black;
+    background-color: crimson;
+    font-size: medium;
+    padding: 10px;
+    text-align: center;
+}
+
+.tableClass {
+    border: 1px solid red;
+    color: black;
+    width: auto;
+}
