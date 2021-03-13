@@ -1,0 +1,32 @@
+/* This is a styles.css template to use in HTML*/
+
+/*
+To use this class, create a div with class name divTextClass i.e. <div class="divTextClass"></div>
+*/
+.divTextClass {
+    color: /* [add text color here] */;
+    font: /* [add font here] */;
+    font-family: /* [add font family here] */;
+    font-size: /* [add font size here] */;
+    font-style: /* [add font style here] */;
+}
+
+/*
+To use this class, create a button with class name buttonClass i.e. <button class="buttonClass"></button>
+*/
+.buttonClass {
+    color: /* [add text color here] */;
+    background-color: /* [add text color here] */;
+    font-size: /* [add font size here] */;
+    padding: /* [add padding thickness here] */;
+    text-align: /* [add text alignment here] */;
+}
+
+/*
+To use this class, create a table with class name tableClass i.e. <table class="tableClass"></table>
+*/
+.tableClass {
+    border: /* [add border width, style, and color here] */;
+    color: /* [add text color here] */;
+    width: /* [add table width here] */;
+}
