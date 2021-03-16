@@ -1,0 +1,9 @@
+.pageHeading {
+    text-align: center;
+}
+
+.divBorderClass {
+    border-style: double;
+    height: 80%;
+    padding: 1%;
+}

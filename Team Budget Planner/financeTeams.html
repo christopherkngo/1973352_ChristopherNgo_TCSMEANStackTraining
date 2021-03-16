@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Team Budget Planner</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" type="text/javascript"></script>
+	</head>
+	
+	<body onload="loadTable()">
+		<h1 class="pageHeading">Finance Teams</h1>
+
+        <div class="divBorderClass">
+            <h2 style="text-align: center;">Annual Budget</h2>
+            <a href="index.html"><h2>Back</h2></a>
+            <table id="teamsTable" border="2px" style="width: 100%; border-style: solid;">
+                <tr>
+                    <th>Client</th>
+                    <th>Project Name</th>
+                    <th>Budget</th>
+                </tr>
+            </table>
+            <h2 id="totalBudget">Total Budget: </h2>
+            <input type="button" value="Delete Local Storage" onclick="deleteData()"/>
+        </div>
+	</body>
+</html>

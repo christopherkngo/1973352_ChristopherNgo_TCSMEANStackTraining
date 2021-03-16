@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Team Budget Planner</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" type="text/javascript"></script>
+	</head>
+	
+	<body>
+		<h1 class="pageHeading">Program Managers</h1>
+
+        <div class="divBorderClass">
+            <h2 style="text-align: center;">Add New Budget</h2>
+            <a href="index.html"><h2>Back</h2></a>
+            <form>
+                <label>Client Name</label></br>
+                <input type="text" id="clientName" required/><br/><br/>
+                <label>Project Name</label></br>
+                <input type="text" id="projectName" required/><br/><br/>
+                <label>Budget (Numbers Only!)</label></br>
+                <input type="number" id="budget" required/><br/><br/><br/>
+                <input type="submit" id="submit" value="Add" onclick="insertData()"/>
+                <input type="reset" value="Clear"/>
+                
+            </form>
+        </div>
+	</body>
+</html>
