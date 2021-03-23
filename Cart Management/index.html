@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cart Manager</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" type="text/javascript"></script>
+	</head>
+	
+	<body onload="getCartSize()">
+
+        <div class="divBorderClass">
+            <h1 class="pageHeading"><b><u>Shopping Cart</u></b></h1>
+            <h2></h2>
+            <h2 id="cartSize">
+                Cart Size: 0
+            </h2>
+            <a href="checkout.html"><h2 style="font-size: xx-large; text-align: right;">Checkout</h2></a>
+            <div style="display: inline-flex;">
+                <div class="divBorderClass">
+                    <form id="form1">
+                        <label>
+                            Name:
+                            <input type="text" id="itemName1" required/>
+                        </label>
+                        <label>
+                            Price:$
+                            <input type="number" id="itemPrice1" required/>
+                            <input type="submit" value="Add" onclick="addItem(1)"/>
+                        </label>
+                    </form>
+                </div>
+                <div class="divBorderClass">
+                    <form id="form2">
+                        <label>
+                            Name:
+                            <input type="text" id="itemName2" required/>
+                        </label>
+                        <label>
+                            Price:$
+                            <input type="number" id="itemPrice2" required/>
+                            <input type="button" value="Add" onclick="addItem(2)"/>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div style="display: inline-flex;">
+                <div class="divBorderClass">
+                    <form id="form3">
+                        <label>
+                            Name:
+                            <input type="text" id="itemName3" required/>
+                        </label>
+                        <label>
+                            Price:$
+                            <input type="number" id="itemPrice3" required/>
+                            <input type="button" value="Add" onclick="addItem(3)"/>
+                        </label>
+                    </form>
+                </div>
+                <div class="divBorderClass">
+                    <form id="form4">
+                        <label>
+                            Name:
+                            <input type="text" id="itemName4" required/>
+                        </label>
+                        <label>
+                            Price:$
+                            <input type="number" id="itemPrice4" required/>
+                            <input type="button" value="Add" onclick="addItem(4)"/>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
