@@ -1,0 +1,27 @@
+<div class="divBorderClass">
+    <h2 class="pageHeading"><u>My Portfolio</u></h2>
+    <input type="button" value="Logout"
+    (click)="logout()"/>
+    <h2 id="welcome"><b></b></h2>
+    <form>
+        <h3>
+            Contact Name: 
+            <input placeholder="Contact Name" id="contactName" required>
+        </h3>
+        <h3>
+            Phone Number:
+            <input placeholder="Phone No." id="phoneNum" required>
+        </h3>
+        <div>
+            <button type="submit" (click)="saveContact()">Save Contact</button>
+        </div>
+    </form>
+    <h2>Contact Details</h2>
+    <table id="contactTable" border="2px" style="width: 50%; border-style: solid; margin-left: auto; margin-right: auto;">
+        <tr>
+            <th>Name</th>
+            <th>Phone No.</th>
+        </tr>
+    </table>
+    <button (click)="deleteData()">Clear Local Storage</button>
+</div>
