@@ -8,6 +8,7 @@
         <h2>
             Questions:
         </h2>
+        <!--
         <table id="qTable" border="2px" style="width: 100%; border-style: solid; margin-left: auto; margin-right: auto;" >
             <tr>
                 <th>Question</th>
@@ -18,31 +19,46 @@
                 <th>Correct</th>
             </tr>
         </table>
+        -->
+        <table id="qTable" border="2px" style="width: 100%; border-style: solid; margin-left: auto; margin-right: auto;" >
+            <tr>
+                <th *ngFor="let col of columns">
+                    {{col}}
+                </th>
+            </tr>
+            <tr *ngFor="let question of questions">
+                <td *ngFor="let col of index">
+                    {{question[col]}}
+                </td>
+            </tr>
+        </table>
         <hr/>
         <h2>
             Add a Question:
         </h2>
-        <mat-form-field style="margin: 5px;">
-            <textarea matInput placeholder="Question" rows="2" id="questionID" required></textarea>
-        </mat-form-field>
-        <mat-form-field style="margin: 5px;">
-            <input matInput placeholder="Option A" id="choiceA" required>
-        </mat-form-field>
-        <mat-form-field style="margin: 5px;">
-            <input matInput placeholder="Option B" id="choiceB" required>
-        </mat-form-field>
-        <mat-form-field style="margin: 5px;">
-            <input matInput placeholder="Option C" id="choiceC" required>
-        </mat-form-field>
-        <mat-form-field style="margin: 5px;">
-            <input matInput placeholder="Option D" id="choiceD" required>
-        </mat-form-field>
-        <mat-form-field style="margin: 5px;">
-            <input matInput placeholder="Correct Answer" id="correctAns" required>
-        </mat-form-field>
-        <div style="text-align: center;">
-            <button mat-raised-button class="quizButtons" style="margin:20px;" (click)="deleteData()">Clear Local Storage</button>
-            <button mat-raised-button type="submit" color="primary" class="quizButtons" style="margin:20px;" (click)="addQuestion()">Add Question</button>
-        </div>
+        <form #questionRef="ngForm" (ngSubmit)="storeQuestion(questionRef.value)">
+            <mat-form-field style="margin: 5px;">
+                <textarea matInput placeholder="Question" rows="2" id="questionID" name="id" ngModel></textarea>
+            </mat-form-field>
+            <mat-form-field style="margin: 5px;">
+                <input matInput placeholder="Option A" id="choiceA" name="choiceA" ngModel>
+            </mat-form-field>
+            <mat-form-field style="margin: 5px;">
+                <input matInput placeholder="Option B" id="choiceB" name="choiceB" ngModel>
+            </mat-form-field>
+            <mat-form-field style="margin: 5px;">
+                <input matInput placeholder="Option C" id="choiceC" name="choiceC" ngModel>
+            </mat-form-field>
+            <mat-form-field style="margin: 5px;">
+                <input matInput placeholder="Option D" id="choiceD" name="choiceD" ngModel>
+            </mat-form-field>
+            <mat-form-field style="margin: 5px;">
+                <input matInput placeholder="Correct Answer" id="correctAns" name="correct" ngModel>
+            </mat-form-field>
+            <div style="text-align: center;">
+                <button mat-raised-button class="quizButtons" style="margin:20px;" (click)="deleteData()">Clear Local Storage</button>
+                <button mat-raised-button type="submit" color="primary" class="quizButtons" style="margin:20px;">Add Question</button>
+            </div>
+        </form>
     </div>
 </div>

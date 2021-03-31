@@ -7,6 +7,21 @@
         <h2 id="questionHead" value>
             Questions:
         </h2>
+        <div *ngFor="let question of questions; let i = index">
+            <label id="{{question.id}}">
+                {{question.id}}
+                <br/>
+                {{question.choiceA}}
+                <input type="radio" name="group{{i}}" value="{{question.choiceA}}">
+                {{question.choiceB}}
+                <input type="radio" name="group{{i}}" value="{{question.choiceB}}">
+                {{question.choiceC}}
+                <input type="radio" name="group{{i}}" value="{{question.choiceC}}">
+                {{question.choiceD}}
+                <input type="radio" name="group{{i}}" value="{{question.choiceD}}">
+                <br/>
+            </label>
+        </div>
         <div id="quizQues">
 
         </div>
