@@ -1,0 +1,22 @@
+<div class="divBorderClass" style="height: 90%;">
+    <h1 class="pageHeading">
+        Online Quiz
+    </h1>
+    <br/>
+    <div class="divBorderClass" style="border-style:groove; margin: 0 auto;">
+        <h2 id="questionHead" value>
+            Questions:
+        </h2>
+        <div id="quizQues">
+
+        </div>
+        <hr/>
+        <div id="quizResult">
+
+        </div>
+        <div style="text-align: center;">
+            <button mat-raised-button class="quizButtons" style="margin:20px;" (click)="returnHome()">Cancel</button>
+            <button mat-raised-button color="primary" class="quizButtons" style="margin:20px;"(click)="submitQuiz()" >Submit</button>
+        </div>
+    </div>
+</div>
