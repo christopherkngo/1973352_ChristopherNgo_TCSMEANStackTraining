@@ -1,0 +1,15 @@
+.pageHeading {
+    text-align: center;
+}
+
+.divBorderClass {
+    border-style: double;
+    height: 80%;
+    margin: 1% 1% 1% 1%;
+    padding: 1%;
+}
+
+.taskBox { 
+    margin: 0 auto; 
+    width:180px;
+}

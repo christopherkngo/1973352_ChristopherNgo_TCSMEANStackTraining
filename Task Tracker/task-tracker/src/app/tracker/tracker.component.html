@@ -1,0 +1,48 @@
+<div class="divBorderClass">
+    <h1 class="pageHeading">
+        Task Tracker
+    </h1>
+    <input type="button" value="Logout" (click)="logout()"/>
+    <hr style="border-style: double;" flex/>
+    <div class="divBorderClass" style="width: 45%; height: 70%; float:left;">
+        <h2 class="pageHeading">
+            <u>To-Do Tasks</u>
+        </h2>
+        <form class="taskBox" id="taskForm">
+            <h3>
+                ID: 
+                <input type="text" placeholder="Task ID" id="taskID" style="width: 170px;" required>
+            </h3>
+            <h3>
+                Name: 
+                <input type="text" placeholder="Task Name" id="taskName" style="width: 170px;" required>
+            </h3>
+            <h3>
+                Task:
+                <textarea placeholder="Task Description" rows="4" id="taskDesc" style="width: 170px;" required></textarea>
+            </h3>
+            <h3>
+                Deadline: 
+                <input type="date" placeholder="Task Deadline" id="taskDate" style="width: 170px;" required>
+            </h3>
+            <div style="text-align: center;">
+                <button type="submit" style="margin:5px;" (click)="submitTask()">Submit</button>
+                <button type="button" style="margin:5px;" (click)="resetForm()">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div class="divBorderClass" style="width: 45%; height: 70%; float:right;">
+        <h2 class="pageHeading">
+            <u>To-Do List</u>
+        </h2>
+        <table id="taskTable" border="2px" style="width: 100%; border-style: solid; margin-left: auto; margin-right: auto;" >
+            <tr>
+                <th>Emp ID</th>
+                <th>Name</th>
+                <th>Task</th>
+                <th>Deadline</th>
+            </tr>
+        </table>
+        <button style="margin-top: 5px;" (click)="clearTasksFromTable()">Clear Table</button>
+    </div>
+</div>

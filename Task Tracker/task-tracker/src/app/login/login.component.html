@@ -1,0 +1,22 @@
+<div class="divBorderClass">
+    <h1 class="pageHeading">
+        Welcome to Task Manager
+    </h1>
+    <h2 class="pageHeading">
+        Task Manager Login Page
+    </h2>
+    <form class="loginBox">
+        <h3>
+            Username: 
+            <input placeholder="Username" id="loginUser" required>
+        </h3>
+        <h3>
+            Password:
+            <input type="password" placeholder="Password" id="loginPass" required>
+        </h3>
+        <div style="text-align: center;">
+            <button type="submit" style="margin:5px;" (click)="enterTaskManager()">Login</button>
+            <button type="button" style="margin:5px;" (click)="register()">Sign Up</button>
+        </div>
+    </form>
+</div>

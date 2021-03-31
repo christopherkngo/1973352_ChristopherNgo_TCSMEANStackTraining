@@ -1,0 +1,24 @@
+<div class="divBorderClass">
+    <h1 class="pageHeading">
+        Registration Page
+    </h1>
+    <form class="registerBox">
+        <h3>
+            Full Name: 
+            <input placeholder="Full Name" id="fullName" required>
+        </h3>
+        <h3>
+            Username: 
+            <input placeholder="Username" id="registerUser" required>
+        </h3>
+        <h3>
+            Password:
+            <input type="password" placeholder="Password" id="registerPass" required>
+        </h3>
+        <div style="text-align: center;">
+            <button style="margin:5px;" (click)="backToLogin()">Return to Login</button>
+            <button type="submit" style="margin:5px;" (click)="register()">Register</button>
+            <button style="margin:5px;" (click)="deleteData()">Clear Local Storage</button>
+        </div>
+    </form>
+</div>
