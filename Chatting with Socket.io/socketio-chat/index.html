@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- connected socket library file -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/JavaScript">
+        var socket = io();      // connection happen with server program. 
+
+        function sendMessage() {
+            var name = document.getElementById("name").value;
+            var message = document.getElementById("message").value;
+            socket.emit("chat","Hello " + name + ",");
+            socket.emit("chat",message);
+            document.getElementById("chatForm").reset();
+        }
+
+    </script>
+    <style>
+        .pageHeading {
+            text-align: center;
+        }
+
+        .divBorderClass {
+            border-style: double;
+            height: 80%;
+            margin: 1% 1% 1% 1%;
+            padding: 1%;
+        }
+
+        form { 
+            margin: 0 auto; 
+            width:170px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="pageHeading">Socket IO Chat</h1>
+    <div class="divBorderClass" style="width: 50%; border-style: solid; margin-left: auto; margin-right: auto;">
+        <form id="chatForm">
+            <h3>
+                Name:
+                <br/>
+                <input type="text" placeholder="Name" id="name" style="width: 170px;" required/>
+            </h3>
+            <h3>
+                Message:
+                <br/>
+                <textarea placeholder="Message" rows="4" id="message" style="width: 170px;" required></textarea>
+            </h3>
+            <div style="text-align: center;">
+                <input type="reset" value="Reset"/>
+                <input type="button" value="Send" onclick="sendMessage()"/>
+            </div>
+        </form>
+        
+        
+    </div>
+</body>
+</html>
